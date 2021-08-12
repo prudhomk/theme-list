@@ -1,25 +1,17 @@
-/* eslint-disable max-len */
 import React from 'react';
-import { useAvailableThemes, useSetSelectedTheme, useAvailableAPIs, useSetSelectedApi } from '../../state/CharacterProvider';
+import { ThemeContext, ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './Theme';
+import { GlobalStyles } from './Global';
 
-const ThemeToggle = () => {
-  const availableThemes = useAvailableThemes();
-  const setSelectedTheme = useSetSelectedTheme();
-  const availableApis = useAvailableAPIs();
-  
-
-  const handleChange = ({ target }) => setSelectedTheme(target.value);
-
+function ThemeToggle() {
   return (
-    <ul>
-      {availableApis.map((api) => (
-        <li key={api}>
-          <label>{api}</label>
-          <input type="radio" name="theme" value={theme} onChange={handleChange} />
-        </li>
-      ))}
-    </ul>
+    <ThemeProvider theme={lightTheme}>
+      <>
+        <GlobalStyles />
+        <button>Toggle Theme</button>
+      </>
+    </ThemeProvider>
   );
-};
+}
 
 export default ThemeToggle;

@@ -1,12 +1,12 @@
 import React from 'react';
 import CharacterList from '../characters/CharacterList';
-import ThemeToggle from '../themes/ThemeToggle';
+import Header from '../header/Header';
 
 
 export default function App() {
   return (
     <>
-      <ThemeToggle />
+      <Header />
       <CharacterList />
     </>
   );
