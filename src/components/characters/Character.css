@@ -1,0 +1,19 @@
+.Character {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Character ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.Character li {
+  list-style: none;
+}
+
+.Character img {
+  max-height: 10rem;
+}
