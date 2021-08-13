@@ -7,7 +7,7 @@ render(
  
   <CharacterProvider>
  
-      <App />
+    <App />
 
   </CharacterProvider>,
   document.getElementById('root')

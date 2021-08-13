@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { useTheme } from '../../state/useTheme';
 import { lightTheme, darkTheme } from './Theme';
 import { GlobalStyles } from './Global';
+import Toggle from './Toggle';
 
 function ThemeToggle() {
 
@@ -17,7 +18,7 @@ function ThemeToggle() {
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <button theme={theme} toggleTheme={toggleTheme}>Change Theme</button>
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
       </>
     </ThemeProvider>
   );
