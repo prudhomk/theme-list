@@ -6,9 +6,7 @@ import { CharacterProvider } from './state/CharacterProvider';
 render(
  
   <CharacterProvider>
- 
     <App />
-
   </CharacterProvider>,
   document.getElementById('root')
 );
