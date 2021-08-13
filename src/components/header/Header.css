@@ -1,0 +1,11 @@
+.Header {
+  display: flex;
+  padding: 5px;
+}
+
+.Header button {
+  size: 30px;
+  width: 60px;
+  height: 40px;
+  justify-content: center;
+}
