@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacters } from '../../state/CharacterProvider';
 import Character from './Character';
+import styles from './Character.css';
 
 const CharacterList = () => {
   const characters = useCharacters();
@@ -11,7 +12,7 @@ const CharacterList = () => {
     </li>
   ));
 
-  return <ul>{characterElements}</ul>;
+  return <ul className={styles.Character}>{characterElements}</ul>;
 };
 
 export default CharacterList;

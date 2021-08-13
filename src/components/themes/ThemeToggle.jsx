@@ -1,14 +1,23 @@
 import React from 'react';
-import { ThemeContext, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import { useTheme } from '../../state/useTheme';
 import { lightTheme, darkTheme } from './Theme';
 import { GlobalStyles } from './Global';
 
 function ThemeToggle() {
+
+  const [theme, toggleTheme, componentMounted] = useTheme();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  if(!componentMounted) {
+    return <div />;
+  }
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <button>Toggle Theme</button>
+        <button theme={theme} toggleTheme={toggleTheme}>Change Theme</button>
       </>
     </ThemeProvider>
   );
